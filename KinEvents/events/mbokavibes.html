@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mboka Vibes 2025 | Kinevent</title>
+  <link rel="icon" href="../image/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="../design/events.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ✅ Compte à rebours flottant -->
+  <div class="countdown-fixed scroll-reveal">
+    <i class="fas fa-hourglass-start"></i>
+    <div id="timer">
+      <span id="days">00</span>j
+      <span id="hours">00</span>h
+      <span id="minutes">00</span>min
+      <span id="seconds">00</span>s
+    </div>
+  </div>
+
+  <header>
+    <div class="logo-container">
+      <a href="../index.html">
+        <img src="../Image/logo.png" alt="Logo Kinevent" class="logo" />
+      </a>
+      <h1>Kinevent</h1>
+    </div>
+    <nav>
+      <a href="../index.html" class="cta-btn"><i class="fas fa-arrow-left"></i> Retour à l’accueil</a>
+    </nav>
+  </header>
+
+  <main class="event-page">
+    <h2><i class="fas fa-microphone"></i> MBOKA VIBES 2025</h2>
+    <img src="../Image/mbokavibes.jpeg" alt="Festival Mboka Vibes" class="event-cover-large" />
+
+    <p>
+      Le <strong>28 juin</strong>, la jeunesse congolaise prend le pouvoir.  
+      Un événement-choc, une scène pour ceux qui veulent <strong>exprimer</strong>, <strong>revendiquer</strong>, <strong>briller</strong>.
+    </p>
+
+    <ul>
+      <li><i class="fas fa-tshirt"></i> Mode</li>
+      <li><i class="fas fa-music"></i> Musique live</li>
+      <li><i class="fas fa-futbol"></i> Tournois</li>
+      <li><i class="fas fa-comments"></i> Conférences</li>
+      <li><i class="fas fa-paint-brush"></i> Performances artistiques</li>
+      <li><i class="fas fa-fire"></i> Ambiance 100% mboka</li>
+    </ul>
+
+    <p>
+      <strong><i class="fas fa-map-marker-alt"></i> Lieu :</strong> Collège Notre-Dame du Congo – Terrain Luxor  
+      <br />
+      <strong><i class="fas fa-calendar-alt"></i> Date :</strong> Samedi 28 Juin 2025  
+      <br />
+      <strong><i class="fas fa-ticket-alt"></i> Billets :</strong> 7$ en prévente | 10$ sur place  
+    </p>
+
+    <div class="achat-billet-container scroll-reveal">
+      <a href="https://wa.me/243993154677?text=Bonjour%2C+je+souhaite+acheter+un+billet+pour+Mboka+Vibes+2025"
+         target="_blank"
+         class="achat-btn">
+        <i class="fab fa-whatsapp"></i> Acheter un billet maintenant
+      </a>
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.882140323012!2d15.2847436147535!3d-4.32501384717139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a3389e64d36c3%3A0x7e95d683d8a80e78!2sKinshasa!5e0!3m2!1sfr!2scd!4v1681920000000"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+
+    <div class="event-socials">
+      <h4><i class="fas fa-share-alt"></i> Suivez l'événement :</h4>
+      <a href="https://instagram.com/kinevent" target="_blank">
+        <i class="fab fa-instagram"></i> @mboka_concept
+      </a>
+      <a href="https://wa.me/243993154677" target="_blank">
+        <i class="fab fa-whatsapp"></i> +243 993154677
+      </a>
+    </div>
+
+    <p class="hashtag">
+      <i class="fas fa-bullhorn"></i> UN PEUPLE. UNE VIBE. UNE RÉVOLUTION.  
+      <br />
+      #MbokaVibes #RévolutionCulturelle #28Juin #KinshasaBouge #JeunesseCongolaise #MbokaLaForceDuPeuple
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Kinevent | Suivez-nous sur
+    <a href="https://instagram.com/kin__event" target="_blank">Instagram</a>
+  </footer>
+
+  <!-- ✅ Script compte à rebours + scroll -->
+  <script>
+    // Scroll reveal
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+    const scrollObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.3 });
+    scrollElements.forEach(el => scrollObserver.observe(el));
+
+    // Compte à rebours
+    const targetDate = new Date("June 28, 2025 10:00:00").getTime();
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const timeLeft = targetDate - now;
+      const timer = document.getElementById("timer");
+
+      if (timeLeft <= 0) {
+        timer.innerHTML = "L’événement commence !";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = String(days).padStart(2, '0');
+      document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>

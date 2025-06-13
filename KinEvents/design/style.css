@@ -1,0 +1,411 @@
+/* ========== POLICES & COULEURS ========= */
+body {
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    background-color: #0f172a; /* fond sombre */
+    color: #f1f5f9; /* texte clair */
+  }
+  body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
+video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+#teaser2.small-teaser {
+  max-width: 320px;
+  height: auto;
+}
+
+
+  
+  :root {
+    --bleu: #1e3a8a;
+    --rouge: #dc2626;
+    --jaune: #facc15;
+    --noir: #0f172a;
+    --gris: #334155;
+  }
+  
+  /* ========== HEADER ========= */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--noir);
+    padding: 1rem 2rem;
+    border-bottom: 2px solid var(--jaune);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .nav-tabs {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-tabs a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .nav-tabs a:hover,
+  .nav-tabs .active {
+    color: var(--jaune);
+  }
+  
+  .nav-tabs a:hover::after,
+  .nav-tabs .active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--jaune);
+  }
+  
+  /* ========== SECTION ========= */
+  section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* ========== BOUTONS CTA ========= */
+  .cta-btn {
+    display: inline-block;
+    background-color: var(--bleu);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem 0;
+    transition: background 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: var(--rouge);
+  }
+  
+  /* ========== EVENT CARDS ========= */
+  .event-card {
+    display: flex;
+    background: #1e293b; /* gris foncé */
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin: 2rem 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  
+  .event-cover {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+    height: auto;
+    flex-shrink: 0;
+  }
+  
+  .event-info {
+    padding: 1.5rem;
+    flex: 1;
+  }
+  
+  .badge {
+    background: var(--jaune);
+    color: black;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+  
+  /* ========== FOOTER ========= */
+  footer {
+    background: var(--noir);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  
+  footer a {
+    color: var(--jaune);
+    text-decoration: none;
+  }
+  
+  /* ========== SOCIAL LINKS ========= */
+  .social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    margin: 0.5rem 0;
+  }
+  
+  .social-links a {
+    color: var(--jaune);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .social-links a i {
+    margin-right: 0.5rem;
+  }
+
+
+  /* ========== HERO SECTION ========== */
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.4);
+  }
+  
+  .hero-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-overlay .slogan {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* ========== SECTION À LA UNE ========== */
+  .a-la-une {
+    background: var(--noir);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .a-la-une .cta-btn {
+    margin-top: 1rem;
+    background-color: var(--jaune);
+    color: black;
+  }
+  
+  .a-la-une .cta-btn:hover {
+    background-color: var(--rouge);
+    color: white;
+  }
+  
+  /* ========== PROCHAINS ÉVÉNEMENTS ========== */
+  .prochains-evenements {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .prochains-evenements h2 {
+    text-align: center;
+    color: var(--jaune);
+    margin-bottom: 2rem;
+  }
+  
+  .event-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #1e293b;
+    color: white;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .event-cover {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .event-info {
+    padding: 1.5rem;
+    flex: 1;
+  }
+  
+  .event-info h4 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--jaune);
+  }
+  
+  /* ========== POURQUOI KINEVENT ========== */
+  .why-kinevent {
+    background-color: #0f172a;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .why-kinevent h2 {
+    color: var(--jaune);
+    margin-bottom: 2rem;
+  }
+  
+  .why-kinevent ul {
+    list-style: none;
+    padding: 0;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .why-kinevent li {
+    padding: 1rem;
+    border-bottom: 1px solid #334155;
+    font-size: 1.2rem;
+    text-align: left;
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  .why-kinevent li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--jaune);
+  }
+
+  .why-kinevent li i {
+    color: var(--jaune);
+    margin-right: 0.8rem;
+    width: 20px;
+  }
+
+ 
+ 
+  
+
+
+  /* Responsive ajustement */
+  @media (max-width: 768px) {
+    .hero-overlay h2 {
+      font-size: 2rem;
+    }
+    .event-card {
+      flex-direction: column;
+    }
+    .event-cover {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo-container {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .nav-tabs {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-overlay h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-overlay .slogan {
+    font-size: 1rem;
+  }
+
+  section, .prochains-evenements, .a-la-une, .why-kinevent {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay .slogan {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .event-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .why-kinevent li {
+    font-size: 1rem;
+  }
+
+  .event-card {
+    margin: 1rem 0;
+  }
+}
+
+.teaser-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.teaser-container iframe,
+.teaser-container video {
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+  
+  

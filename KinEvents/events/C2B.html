@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C2B TODJALI OU BIEN???!!! 2025 | KinEvents</title>
+  <link rel="icon" href="../Image/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../design/events.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <a href="../index.html">
+        <img src="../Image/logo.png" alt="Logo Kinevent" class="logo" />
+      </a>
+      <h1>KinEvents</h1>
+    </div>
+    <nav>
+      <a href="../index.html" class="cta-btn"><i class="fas fa-arrow-left"></i> Retour à l’accueil</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="event-page">
+    <h2>C2B TODJALI OU BIEN???!!!</h2>
+    <img src="../Image/IMG_1793.jpeg" alt="Affiche C2B" class="event-cover-large" />
+
+    <p>
+      🔥 <strong>Le 21 juin 2025</strong>, prépare-toi pour le concert le plus chaud de l’année !
+      <br><br>
+      C2B débarque avec un show explosif à l’Hôtel Marguerite. Musique live, ambiance survoltée, vibes urbaines : sois là ou regrette toute l’année !
+    </p>
+
+    <ul>
+      <li><i class="fas fa-microphone-alt"></i> Musique live et performances exclusives</li>
+      
+    </ul>
+
+    <p>
+      <strong><i class="fas fa-map-marker-alt"></i> Lieu :</strong> Hôtel Marguerite – Kabinda Bokasa, Commune de Kinshasa <br />
+      <strong><i class="fas fa-calendar-alt"></i> Date :</strong> 21 juin 2025 <br />
+      <strong><i class="fas fa-ticket-alt"></i> Billets :</strong> Standard 5000 FC | VIP 5$
+    </p>
+    <!-- Compte à rebours flottant -->
+<div class="countdown-fixed scroll-reveal">
+  <i class="fas fa-hourglass-start"></i>
+  <div id="timer">
+    <span id="days">00</span>j
+    <span id="hours">00</span>h
+    <span id="minutes">00</span>min
+    <span id="seconds">00</span>s
+  </div>
+</div>
+
+
+    <!-- BILLET CTA -->
+<div style="text-align: center; margin: 30px 0;">
+  <a href="https://wa.me/243858169059?text=Bonjour%2C+je+souhaite+acheter+un+billet+pour+C2B+TODJALI+OU+BIEN+2025"
+     target="_blank"
+     class="cta-btn"
+     style="display: inline-block; padding: 12px 25px; font-size: 1.1rem; background-color: #25D366; color: white; border-radius: 30px; font-weight: bold;">
+    <i class="fab fa-whatsapp"></i> Acheter un billet
+  </a>
+</div>
+
+    <!-- MAP -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.464423129473!2d15.315277174158718!3d-4.323511246487289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a36aa36d48cf3%3A0xdb611bf17d601f5f!2sHotel%20Marguerite%20de%20Kinshasa!5e0!3m2!1sfr!2scd!4v1749637008041!5m2!1sfr!2scd"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- SOCIALS -->
+    <div class="event-socials">
+      <h4><i class="fas fa-share-alt"></i> Suivez l'événement :</h4>
+      <a href="https://instagram.com/cramcityentertainment" target="_blank">
+        <i class="fab fa-instagram"></i> @cramcityentertainment
+      </a>
+      <a href="https://wa.me/243858169059" target="_blank">
+        <i class="fab fa-whatsapp"></i> +243 858 169 059
+      </a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 KinEvents | Suivez-nous sur 
+    <a href="https://instagram.com/kin__events" target="_blank">Instagram</a>
+  </footer>
+   <script>
+    // Apparition scroll
+    const scrollElements = document.querySelectorAll('.scroll-reveal');
+    const scrollObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.3 });
+
+    scrollElements.forEach(el => scrollObserver.observe(el));
+     const targetDate = new Date("June 21, 2025 20:00:00").getTime(); // ajuste l'heure exacte si nécessaire
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const timeLeft = targetDate - now;
+
+    const timer = document.getElementById("timer");
+
+    if (timeLeft <= 0) {
+      timer.innerHTML = "L'événement a commencé !";
+      return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = String(days).padStart(2, '0');
+    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FREE CONGO EVENT | KinEvents</title>
+  <link rel="icon" href="../Image/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="../design/events.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .teaser-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .teaser-container iframe {
+      flex: 1 1 45%;
+      min-width: 300px;
+      height: 250px;
+    }
+    /* Style pour la deuxième vidéo plus petite */
+    .small-teaser {
+      width: 800px;
+      height: 500px;
+      margin-top: 20px;
+    }
+
+    /* Style général si besoin */
+    video {
+      max-width: 100%;
+      display: block;
+      margin-bottom: 20px;
+       }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="../index.html">
+        <img src="../Image/logo.png" alt="Logo Kinevent" class="logo" />
+      </a>
+      <h1>KinEvents</h1>
+    </div>
+    <nav>
+      <a href="../index.html" class="cta-btn"><i class="fas fa-arrow-left"></i> Retour à l’accueil</a>
+    </nav>
+  </header>
+
+  <main class="event-page">
+    <h2><i class="fas fa-hand-holding-heart"></i> FREE CONGO EVENT</h2>
+
+    <img src="../Image/IMG_1787.jpeg" alt="Free Congo Event" class="event-cover-large" />
+
+    <p>
+      <strong><i class="fas fa-bullhorn"></i> UN CRI POUR LA PAIX À L'EST</strong><br>
+      Le <strong>Free Congo Event</strong> est un rassemblement artistique, culturel et citoyen au service d’une cause noble : <strong>mettre en lumière l’instabilité et les souffrances vécues à l’Est de la République Démocratique du Congo</strong>.
+    </p>
+
+    <p>
+      À travers l’art, la musique, la parole et l’unité, nous voulons éveiller les consciences, interpeller et mobiliser les jeunes pour un avenir de paix.
+    </p>
+
+    <p>
+      <strong><i class="fas fa-calendar-alt"></i> Date :</strong> À venir très bientôt<br />
+      <strong><i class="fas fa-map-marker-alt"></i> Lieu :</strong> En cours de confirmation
+    </p>
+
+  
+             <!-- Premier teaser (normal) -->
+       <video id="teaser1" controls muted>
+            <source src="../Video/teaserfreecongo1.MP4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+       </video>
+
+           <!-- Deuxième teaser (réduit) -->
+       <video id="teaser2" class="small-teaser" controls muted>
+            <source src="../Video/teaserfreecongo2.MP4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+  
+
+
+
+    <div class="achat-billet-container scroll-reveal">
+      <a href="https://wa.me/243822925438?text=Bonjour%2C+je+veux+des+infos+sur+le+FREE+CONGO+EVENT" target="_blank" class="achat-btn">
+        <i class="fab fa-whatsapp"></i> Plus d'infos sur WhatsApp
+      </a>
+    </div>
+
+    <div class="event-socials">
+      <h4><i class="fas fa-share-alt"></i> Suivez l'événement :</h4>
+      <a href="https://instagram.com/kin__event" target="_blank">
+        <i class="fab fa-instagram"></i> @kin__event
+      </a>
+      <a href="https://wa.me/243822925438" target="_blank">
+        <i class="fab fa-whatsapp"></i> +243 822 925 438
+      </a>
+    </div>
+
+    <p class="hashtag">
+      <i class="fas fa-hashtag"></i> #FreeCongoEvent #JusticePourLEst #RDCUnie #PaixEnRDC #KinshasaSeMobilise
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 KinEvents | Suivez-nous sur
+    <a href="https://instagram.com/kin__event" target="_blank">Instagram</a>
+  </footer>
+ 
+  <script>
+  // Sélectionne toutes les vidéos
+  const videos = document.querySelectorAll('video');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  // Observe chaque vidéo une par une
+  videos.forEach(video => observer.observe(video));
+</script>
+
+
+
+
+
+</body>
+</html>
